@@ -22,12 +22,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        go-version: ["oldstable", "stable", "tip"]
-        exclude:
+        go-version: ["oldstable", "stable"]
+        include:
           - go-version: tip
-    include:
-      - go-version: tip
-        experimental: true
+            experimental: true
     continue-on-error: ${{ matrix.experimental == true }}
     steps:
       - uses: actions/checkout@v4
