@@ -1,0 +1,9 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "build", "type": "shell", "command": "make build", "group": { "kind": "build", "isDefault": true }, "problemMatcher": "$go" },
+    { "label": "test", "type": "shell", "command": "make test", "group": "test", "problemMatcher": "$go" },
+    { "label": "lint", "type": "shell", "command": "make lint", "problemMatcher": "$go" },
+    { "label": "ci (all gates)", "type": "shell", "command": "make ci", "problemMatcher": "$go" }
+  ]
+}

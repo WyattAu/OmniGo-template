@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "golang.go",
+    "tekumara.typos-vscode",
+    "EditorConfig.EditorConfig",
+    "github.vscode-github-actions"
+  ]
+}

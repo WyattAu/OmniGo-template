@@ -1,0 +1,40 @@
+# Release flow: tag v* → goreleaser builds/signs/attests → homebrew tap.
+version: "2"
+
+project_name: omni
+
+builds:
+  - id: omni
+    main: ./cmd/omni
+    env:
+      - CGO_ENABLED=0
+    goos: [linux, darwin, windows]
+    goarch: [amd64, arm64]
+    ignore:
+      - goos: windows
+        goarch: arm64
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+
+archives:
+  - formats: [tar.gz]
+    name_template: >-
+      {{ .ProjectName }}_{{ .Os }}_{{ .Arch }}
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+
+checksum:
+  name_template: checksums.txt
+
+sboms:
+  - artifacts: archive
+
+# Homebrew tap scaffold — enable after the first release (the estate's
+# homebrew-* taps are the pattern; create homebrew-omni, then uncomment):
+# brews:
+#   - repository:
+#       owner: WyattAu
+#       name: homebrew-omni
+#     homepage: https://github.com/WyattAu/OmniGo-template
+#     description: Example CLI from the OmniGo template

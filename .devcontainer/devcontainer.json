@@ -1,0 +1,26 @@
+{
+  // Image flavor: zero-setup. The nix flavor lives in .devcontainer/nix/.
+  "name": "OmniGo",
+  "image": "mcr.microsoft.com/devcontainers/go:1-1.24-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "postCreateCommand": "go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@latest && go install golang.org/x/vuln/cmd/govulncheck@latest && go install mvdan.cc/gofumpt@latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go",
+        "tekumara.typos-vscode",
+        "EditorConfig.EditorConfig",
+        "github.vscode-github-actions"
+      ],
+      "settings": {
+        "go.useLanguageServer": true,
+        "go.lintTool": "golangci-lint",
+        "go.formatTool": "gofumpt",
+        "go.testFlags": ["-race"],
+        "editor.formatOnSave": true
+      }
+    }
+  }
+}

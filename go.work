@@ -1,0 +1,6 @@
+// go.work — the monorepo anchor. Start with one module; split into
+// workspace modules only when a service needs an independent release
+// cadence (ADR-0001). `go work use ./modules/<name>` when you do.
+go 1.24
+
+use .

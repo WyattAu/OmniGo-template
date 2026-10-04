@@ -1,0 +1,26 @@
+# golangci-lint v2 — maximal but explainable. Add a linter only with a
+# one-line reason; remove one only via ADR.
+version: "2"
+
+linters:
+  default: standard
+  enable:
+    - gosec          # security-aware static analysis
+    - gocritic       # beyond-baseline diagnostics
+    - revive         # configurable style + footgun rules
+    - exhaustive     # enum switch coverage
+    - predeclared    # shadowing builtins
+    - nilnesserr     # misplaced nil checks
+    - unconvert      # redundant conversions
+    - unparam        # unused/constant params
+    - copyloopvar    # post-1.22 loopvar cleanup
+  settings:
+    exhaustive:
+      default-signifies-exhaustive: true
+  exclusions:
+    generated: lax
+
+formatters:
+  enable:
+    - gofumpt        # stricter gofmt
+    - goimports

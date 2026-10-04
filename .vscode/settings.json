@@ -1,0 +1,9 @@
+{
+  "go.useLanguageServer": true,
+  "go.lintTool": "golangci-lint",
+  "go.formatTool": "gofumpt",
+  "go.testFlags": ["-race"],
+  "go.buildFlags": ["-mod=readonly"],
+  "editor.formatOnSave": true,
+  "[go]": { "editor.defaultFormatter": "golang.go" }
+}
