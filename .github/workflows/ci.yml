@@ -70,3 +70,26 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - run: ./scripts/check-contract.sh
+
+  # Loop 1: macOS + Windows legs — the shared gate runs on Linux; these
+  # prove the build+test surface on the other platforms (advisory while
+  # platform-specific findings are triaged).
+  cross-platform:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - run: go build ./...
+      - run: go test -race ./...
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - run: go build ./...
+      - run: go test -race ./...
