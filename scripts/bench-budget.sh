@@ -15,7 +15,7 @@ mkdir -p bench
 # use the statistical path (mean + std-dev) instead of a coin-flip threshold.
 go test -run='^$' -bench=. -benchtime=200ms -count=5 ./... >bench/go-bench.txt
 
-python3 - <<'PY' > "$CURRENT"
+python3 - <<'PY' >"$CURRENT"
 import math
 import pathlib
 import re
