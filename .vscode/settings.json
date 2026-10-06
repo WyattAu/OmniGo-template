@@ -2,8 +2,16 @@
   "go.useLanguageServer": true,
   "go.lintTool": "golangci-lint",
   "go.formatTool": "gofumpt",
-  "go.testFlags": ["-race"],
-  "go.buildFlags": ["-mod=readonly"],
+  "go.testFlags": [
+    "-race"
+  ],
+  "go.buildFlags": [
+    "-mod=readonly"
+  ],
   "editor.formatOnSave": true,
-  "[go]": { "editor.defaultFormatter": "golang.go" }
+  "workbench.colorTheme": "Shroom Space",
+  "workbench.iconTheme": "vs-seti",
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  }
 }
