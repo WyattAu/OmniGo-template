@@ -38,3 +38,16 @@ sboms:
 #       name: homebrew-omni
 #     homepage: https://github.com/WyattAu/OmniGo-template
 #     description: Example CLI from the OmniGo template
+
+# Release notes: conventional-commit groups, newest first, CI/chore noise out.
+# The same groups the estate's commit convention produces (see AGENTS.md).
+changelog:
+  use: git
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^chore:"
+      - "^ci:"
+      - "Merge pull request"
