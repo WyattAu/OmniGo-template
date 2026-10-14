@@ -20,9 +20,13 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
+      # cache: false -- a tag-triggered publish must not write or read runtime
+      # caches; caches outlive the run and can be poisoned by an earlier one
+      # (zizmor cache-poisoning, found live in loop 30).
       - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e  # v7.0.0
         with:
           go-version: stable
+          cache: false
       - uses: goreleaser/goreleaser-action@f06c13b6b1a9625abc9e6e439d9c05a8f2190e94 # v7
         with:
           version: latest
