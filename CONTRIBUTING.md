@@ -4,7 +4,7 @@
 
 1. **Scripts are canonical.** `scripts/*` do the work; `make` wraps them;
    CI runs the scripts. If CI would do anything `make ci` does not do, fix
-   one of them — never add a CI-only step.
+   one of them; never add a CI-only step.
 2. **One source of truth per concern.** Version pins, lint policy, and
    formatting live in exactly one file each. No parallel configs.
 3. **Decisions are recorded.** Any change to layout, gates, or tooling gets

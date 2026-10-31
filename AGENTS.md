@@ -1,6 +1,6 @@
-# AGENTS.md — instructions for AI coding agents
+# AGENTS.md: instructions for AI coding agents
 
-Project: **OmniGo-template** — a member of the WyattAu Omni template family.
+Project: **OmniGo-template**; a member of the WyattAu Omni template family.
 
 ## Non-negotiable contract
 
@@ -32,5 +32,5 @@ $3
 - Requirements are REQ-tagged and traced in `REQUIREMENTS.md`.
 - Estate-wide standards: [engineering-standards](https://github.com/WyattAu/engineering-standards)
   and [OMNI-CORE.md](https://github.com/WyattAu/engineering-standards/blob/main/OMNI-CORE.md).
-- When unsure, read `ARCHITECTURE.md` — it explains *why*, this file
+- When unsure, read `ARCHITECTURE.md`; it explains *why*, this file
   explains *what*.

@@ -16,15 +16,15 @@ contribution rules: [CONTRIBUTING](CONTRIBUTING.md); the estate-wide contract:
    VS Code, Neovim, and CI. IDE integrations are conveniences layered on top,
    never requirements.
 4. **The pipeline is the contract.** If `make ci` passes locally, CI passes
-   remotely. CI runs exactly what `make ci` runs — no special CI-only steps.
+   remotely. CI runs exactly what `make ci` runs; no special CI-only steps.
 
 ## Layout
 
 ```
 OmniGo-template/
 ├── go.mod / go.work     module pin + monorepo anchor (ADR-0001)
-├── cmd/omni             binary — thin main, errors not panics
-├── internal/geometry    domain package — table tests + fuzz target
+├── cmd/omni             binary; thin main, errors not panics
+├── internal/geometry    domain package; table tests + fuzz target
 ├── .golangci.yml        lint stack (gosec/gocritic/revive/exhaustive)
 ├── .goreleaser.yaml     release pipeline + homebrew scaffold
 ├── scripts/  + Makefile the gates (make ci == CI)
@@ -37,8 +37,8 @@ OmniGo-template/
 | Door | What it uses | When |
 |---|---|---|
 | nix + direnv (host) | `flake.nix` devShell | daily driver on nix-capable hosts |
-| Devcontainer — image | language base image | zero-setup, works everywhere |
-| Devcontainer — nix | `.devcontainer/nix/` | nix semantics inside a container |
+| Devcontainer; image | language base image | zero-setup, works everywhere |
+| Devcontainer; nix | `.devcontainer/nix/` | nix semantics inside a container |
 
 All three resolve to the same toolchain versions because nix/flake is the
 system-dependency source of truth and the language-native lockfile (checked

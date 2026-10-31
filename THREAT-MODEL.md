@@ -1,6 +1,6 @@
-# Threat Model — OmniGo-template
+# Threat Model: OmniGo-template
 
-Reference: STRIDE. Scope: the template as consumed by a derived project —
+Reference: STRIDE. Scope: the template as consumed by a derived project -
 files, scripts, and CI definitions a user inherits on "Use this template".
 Trust boundaries: (1) files executed by `make`/scripts on a developer host,
 (2) CI workflows executing with repo-scoped tokens, (3) the dependency and

@@ -1,4 +1,4 @@
-# Requirements — OmniGo-template
+# Requirements: OmniGo-template
 
 Numbered, testable requirements. Every requirement maps to at least one named
 test/script check; every security-relevant check cites at least one

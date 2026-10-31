@@ -1,4 +1,4 @@
-# 0002 — goreleaser with homebrew tap
+# 0002: goreleaser with homebrew tap
 
 Date: 2026-10-04
 

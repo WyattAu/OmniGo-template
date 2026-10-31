@@ -1,4 +1,4 @@
-# 0002 — Estate gates and thresholds
+# 0002: Estate gates and thresholds
 
 Date: 2026-10-04
 
@@ -18,7 +18,7 @@ per-language coverage tiers.
   reusable workflow for the language; otherwise the template's own
   `scripts/*.sh` implement the equivalent checks locally.
 - Coverage thresholds (informational until the project sets stricter ones):
-  Go: >=80% (a) / 70% (b) / 60% (c) — Go-idiomatic thresholds measured by go test -cover.
+  Go: >=80% (a) / 70% (b) / 60% (c); Go-idiomatic thresholds measured by go test -cover.
 - Monthly bitrot cron + one experimental allowed-fail leg on the next
   toolchain version, per the Omni Core Contract.
 

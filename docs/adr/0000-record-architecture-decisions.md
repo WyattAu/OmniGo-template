@@ -1,4 +1,4 @@
-# 0000 — Record architecture decisions
+# 0000: Record architecture decisions
 
 Date: 2026-10-04
 

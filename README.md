@@ -2,7 +2,7 @@
 
 Maximalist Go **monorepo** template: `cmd/` + `internal/` single module
 anchored by `go.work`, golangci-lint (max config), govulncheck, native
-fuzzing, race-detector CI, goreleaser with homebrew tap scaffold — full
+fuzzing, race-detector CI, goreleaser with homebrew tap scaffold; full
 IDE/OS integration (nix flake, dual devcontainers, VS Code). Part of the
 [WyattAu Omni template family](https://github.com/WyattAu?tab=repositories&q=omni-).
 
@@ -10,7 +10,7 @@ IDE/OS integration (nix flake, dual devcontainers, VS Code). Part of the
 
 1. Rename: module path `github.com/wyattau/omnigo-template` → your module,
    `cmd/omni` → your binary, `internal/geometry` → your domain.
-2. Pick a door — all resolve to identical toolchains:
+2. Pick a door; all resolve to identical toolchains:
 
    | Door | Command |
    |---|---|
@@ -19,7 +19,7 @@ IDE/OS integration (nix flake, dual devcontainers, VS Code). Part of the
    | Devcontainer (nix)  | palette → *Rebuild in Container* → pick `.devcontainer/nix/` |
 
    No nix, no docker? `./scripts/bootstrap.sh` prints the manual path.
-3. `make ci` — must be green before your first push.
+3. `make ci`; must be green before your first push.
 
 ## Make targets
 
@@ -61,7 +61,7 @@ homebrew tap block after creating `homebrew-omni` (ADR-0002).
 
 ## License
 
-Apache-2.0 — commercial use expressly permitted.
+Apache-2.0; commercial use expressly permitted.
 
 
 ## Performance budgets

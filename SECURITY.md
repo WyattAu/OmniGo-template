@@ -22,7 +22,7 @@ credited in the advisory unless anonymity is requested.
 
 ## Scope
 
-In scope: anything that breaks the project's documented security contract —
+In scope: anything that breaks the project's documented security contract -
 panic on adversarial input in code paths documented as panic-free, injection
 via parsed input, secrets committed through template defaults, CI supplying
 more privileges than documented.

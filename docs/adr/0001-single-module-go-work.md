@@ -1,4 +1,4 @@
-# 0001 — Single module anchored by go.work
+# 0001: Single module anchored by go.work
 
 Date: 2026-10-04
 
